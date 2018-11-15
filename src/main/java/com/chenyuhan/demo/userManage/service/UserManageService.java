@@ -1,5 +1,8 @@
 package com.chenyuhan.demo.userManage.service;
 
+import com.chenyuhan.demo.userManage.entity.User;
+
+
 import java.util.List;
 import java.util.Map;
 
@@ -15,6 +18,15 @@ public interface UserManageService {
      * @date 2018/10/29 23:48
      * @return
      */
-    List<Map<String, String>> queryUserInfo();
+    List<Map<String, String>> queryAllUser();
+
+    User queryOneUser(User user);
+
+    int addUser(User user);
+
+    int delUser(int uid);
+
+    int updateUser(User user);
+
 
 }

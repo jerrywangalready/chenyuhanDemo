@@ -13,9 +13,11 @@ function queryList() {
         success:function (data) {
 
             console.info(data);
-            // var html = template('grid_template',{'list':data});
-            // $("#grid").html(html);
         }
     });
 
 }
+
+$("#demobutton").click(
+    console.log("按下了demobutton按钮")
+);

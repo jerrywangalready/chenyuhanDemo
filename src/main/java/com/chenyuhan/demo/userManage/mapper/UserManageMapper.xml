@@ -4,9 +4,10 @@
 
 
     <select id="queryList" resultType="java.util.Map">
-        select sex, age from C_USER;
+        select user_name, pass_word, sex, age from C_USER;
 
     </select>
-
-
+    <insert id="addUser" parameterType="com.chenyuhan.demo.userManage.entity.User">
+        insert into C_USER values (#{id} , #{user_name}, #{pass_word}, #{age}, #{sex})
+    </insert>
 </mapper>

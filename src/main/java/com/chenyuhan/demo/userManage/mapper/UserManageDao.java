@@ -1,5 +1,6 @@
 package com.chenyuhan.demo.userManage.mapper;
 
+import com.chenyuhan.demo.userManage.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
@@ -21,4 +22,6 @@ public interface UserManageDao {
      * @return
      */
     List<Map<String, String>> queryList();
+
+    int addUser(User user);
 }

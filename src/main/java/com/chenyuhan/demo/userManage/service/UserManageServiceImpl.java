@@ -1,5 +1,6 @@
 package com.chenyuhan.demo.userManage.service;
 
+import com.chenyuhan.demo.userManage.entity.User;
 import com.chenyuhan.demo.userManage.mapper.UserManageDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,8 @@ public class UserManageServiceImpl implements UserManageService {
     @Autowired
     private UserManageDao userManageDao;
 
+
+
     /**
      * @return
      * @Description 查询用户信息
@@ -26,7 +29,7 @@ public class UserManageServiceImpl implements UserManageService {
      * @date 2018/10/29 23:46
      */
     @Override
-    public List<Map<String, String>> queryUserInfo() {
+    public List<Map<String, String>> queryAllUser() {
 
         List<Map<String, String>> resultList = new ArrayList<>();
 
@@ -40,6 +43,30 @@ public class UserManageServiceImpl implements UserManageService {
         }
 
 //        List<Map<String, String>> result = userManageDao.queryList();
-        return resultList;
+        return null;
     }
+
+
+    @Override
+    public User queryOneUser(User user) {
+        return null;
+    }
+
+    @Override
+    public int addUser(User user) {
+
+        return userManageDao.addUser(user);
+    }
+
+    @Override
+    public int delUser(int uid) {
+        return 0;
+    }
+
+    @Override
+    public int updateUser(User user) {
+        return 0;
+    }
+
+
 }
